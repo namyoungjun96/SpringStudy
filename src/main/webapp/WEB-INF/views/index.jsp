@@ -8,8 +8,16 @@
 </head>
 <body>
     <% DBoxDTO  dBoxDTO=(DBoxDTO)request.getAttribute("value");%>
-    ID = <%= dBoxDTO.getUser_id()%><br>
-    NAME = <%=dBoxDTO.getUser_name()%>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+        </tr>
+        <tr>
+            <td><%=dBoxDTO.getUser_id()%></td>
+            <td><%=dBoxDTO.getUser_name()%></td>
+        </tr>
+    </table>
 </body>
 </html>
 
