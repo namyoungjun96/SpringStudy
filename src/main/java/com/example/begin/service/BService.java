@@ -14,10 +14,17 @@ public class BService {
     CRepository cRepository;
 
     public DBoxDTO Service() throws SQLException, ClassNotFoundException {
-        DBox dBox=cRepository.Repository("cat");
-        DBoxDTO dBoxDTO=new DBoxDTO();
-        dBoxDTO.setUser_id(dBox.getUser_id());
-        dBoxDTO.setUser_name(dBox.getUser_name());
-        return dBoxDTO;
+        //DBox dBox=cRepository.Repository("cat");
+        //DBoxDTO dBoxDTO=new DBoxDTO();
+        //dBoxDTO.setUser_id(dBox.getUser_id());
+        //dBoxDTO.setUser_name(dBox.getUser_name());
+        //return dBoxDTO;
+
+        DBoxDTO dBoxDTOSet=cRepository.Repository("cat");
+        DBoxDTO dBoxDTOGet=new DBoxDTO();
+        dBoxDTOGet.setUser_id(dBoxDTOSet.getUser_id());
+        dBoxDTOGet.setUser_name(dBoxDTOSet.getUser_name());
+
+        return dBoxDTOGet;
     }
 }
