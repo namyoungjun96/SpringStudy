@@ -10,7 +10,7 @@ public class CRepository {
     public DBoxDTO Repository(String id) throws ClassNotFoundException, SQLException{
         //DBoxDTO가 원래는 DBox였다.
         Class.forName("org.mariadb.jdbc.Driver");                       // mysql로 하면 바꿔야됨
-        Connection c= DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "1234");
+        Connection c= DriverManager.getConnection("jdbc:mysql://localhost:3308/test", "root", "1234");
                                                             // 이거도 바꿔야됨
         PreparedStatement user_id=c.prepareStatement("select * from user where user_id=?");
         user_id.setString(1, id);
