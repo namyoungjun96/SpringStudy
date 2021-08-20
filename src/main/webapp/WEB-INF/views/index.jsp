@@ -7,7 +7,7 @@
     <title>Hello</title>
 </head>
 <body>
-    <% DBoxDTO  dBoxDTO=(DBoxDTO)request.getAttribute("value");%>
+    <% DBoxDTO dBoxDTO=(DBoxDTO)request.getAttribute("value");%>
     <table border="1">
         <tr>
             <td>ID</td>
