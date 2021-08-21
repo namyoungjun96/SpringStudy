@@ -19,6 +19,8 @@ public class BService {
         //dBoxDTO.setUser_id(dBox.getUser_id());
         //dBoxDTO.setUser_name(dBox.getUser_name());
         //return dBoxDTO;
+        // 스프링에서 가지고 놀 값과 데이터베이스에서 가지고 놀 값이 달라서 쓴다. 컨버팅 용도^^
+        // 주고받을때 보안에 취약하기때문에 안에서 가지고 놀 값이 다른것
 
         DBoxDTO dBoxDTOSet=cRepository.Repository("cat");
         DBoxDTO dBoxDTOGet=new DBoxDTO();
